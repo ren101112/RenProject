@@ -41,11 +41,30 @@ public class RenProject extends World{
             plane.move(72);
         }//using a loop that goes once so I can compress the code
         plane.teleport(0,0);
+        river();
 
 
 
 
 
+
+
+    }
+    public void river(){
+        plane.isTrail = true;
+        plane.trailWidth = 60;
+        plane.setColor(20, 50, 180);   // deep blue
+
+        plane.teleport(0, 650);
+        plane.startingAngle(0);        // face right
+        plane.move(800);
+
+        // Lighter water highlight
+        plane.trailWidth = 40;
+        plane.setColor(80, 120, 255);  // lighter blue
+        plane.teleport(0, 660);
+        plane.startingAngle(0);
+        plane.move(800);
 
 
     }
